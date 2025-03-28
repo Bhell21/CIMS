@@ -1,12 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<style type="text/css">
-    .invalid{
-        color: red;
-        font-weight: 100;
-    }
-</style>
 <div class="container">
     <!-- Outer Row -->
     <div class="row justify-content-center">
@@ -17,7 +11,9 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div style="background: url('{{ asset('img/login/loginimg.jpg') }}');background-repeat: no-repeat;    background-size: 982px 681px;background-position-x: center;" class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div style="background: url('{{ asset('img/login.jpg') }}') no-repeat center center; background-size: cover;" class="col-lg-6 d-none d-lg-block bg-login-image">
+                        </div>
+
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -30,9 +26,9 @@
                                             id="exampleInputEmail" aria-describedby="emailHelp"
                                             placeholder="Enter Email Address...">
                                         @error('email')
-                                            <span class="invalid" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                        <span class="invalid" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
@@ -40,9 +36,9 @@
                                             id="exampleInputPassword" name="password" placeholder="Password">
 
                                         @error('password')
-                                            <span class="invalid" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                        <span class="invalid" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
