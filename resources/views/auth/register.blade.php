@@ -17,7 +17,7 @@
                                 
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user @error('name') is-invalid @enderror" id="exampleFirstName" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Complete Name">
+                                        <input type="text" class="form-control form-control-user @error('name') is-invalid @enderror" id="exampleFirstName" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Full Name">
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
