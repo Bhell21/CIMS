@@ -25,6 +25,6 @@ class AdminMiddleware
             }
         }
 
-        return redirect(url('/admin/dashboard'));
+        return redirect(url('/'));
     }
 }

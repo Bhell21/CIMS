@@ -26,3 +26,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function () {
     Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
 });
 
+Route::group(['prefix' => 'user', 'middleware' => ['user']], function () {
+    Route::get('/', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
+});

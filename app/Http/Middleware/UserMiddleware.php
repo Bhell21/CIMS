@@ -17,9 +17,10 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user()){
-            $role = Role::where('id', auth()->role_id)->first();
-            if($role->id == '2'){
+        if (Auth::user()) {
+            $role = Role::where('id', auth()->user()->role_id)->first();
+
+            if ($role && $role->id == '2') {
                 return $next($request);
             }
         }
