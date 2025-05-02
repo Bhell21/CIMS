@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 
@@ -8,6 +8,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        return view('user.index'); // Ensure this view exists
     }
 }
